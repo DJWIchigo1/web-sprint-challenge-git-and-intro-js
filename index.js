@@ -286,7 +286,7 @@ Use addArtist to do the following:
     name: "Your Name Here", 
     years: "Your Birth Year - current day",
     genre: "Web Design", 
-    nationality: "Your Nationality Here"
+    nationality: "Your Nationality Here",
     bio: "Add 1-2 sentences (or use lorem ipsum)"
   }  
 5. Add the newly created object to the copied array, then return the copied array
