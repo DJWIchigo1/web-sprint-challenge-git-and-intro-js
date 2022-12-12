@@ -256,7 +256,9 @@ function listOfNames(array) {
   for (const artists of newArray){
     console.log(artists);
     }
+    return newArray;
   }
+  
 console.log("task 4:", listOfNames("artists")); // ["Amedeo Modigliani", "Vasiliy Kandinskiy", "Diego Rivera"....]
 
 
@@ -275,9 +277,10 @@ function removeArtist(array) {
   artists.shift();
  // "Amedeo Modigliani"
 
- artists;
+artists;
  // ["Vasiliy Kandinskiy", " Diego Rivera", "Claude Monet", "Rene Magritte"]
 
+  return artists;
 }
 console.log('task 5:', removeArtist("artists"[0])); // ["Vasiliy Kandinskiy", " Diego Rivera", "Claude Monet", "Rene Magritte"]
 
@@ -324,6 +327,7 @@ Use lotsOfArt to do the following:
 function lotsOfArt(array) {
   var artists = ["Amedeo Modigliani", "Vasiliy Kandinskiy", "Diego Rivera", "Claude Monet", "Rene Magritte", "Salvador Dali",];
   artists.length = 100;
+  return artists;
 }
 console.log("task 7:", lotsOfArt(artists));
 
@@ -339,6 +343,7 @@ Use artistInfo to do the following:
 
 function artistInfo(array, name){
   var artists = ["Frida Kahlo"];
+  return artists
 }
 
 console.log("task 8:", artistInfo(artists, 'Frida Kahlo'));
@@ -355,6 +360,7 @@ Use artistByCountry to do the following:
 
 function artistByCountry(array, nationality){
   const artists = ["Amedeo Modigliani", "Vasiliy Kandinskiy", "Diego Rivera", "Claude Monet", "Rene Magritte", "Salvador Dali",]
+  return artists;
 
 }
 
