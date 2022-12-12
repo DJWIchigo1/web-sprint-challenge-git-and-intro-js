@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const artists = [
   {
     "id": 0,
@@ -231,10 +232,11 @@ Use getArtistByIndex to do the following:
 🌟 EXAMPLE: if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist at index 0 is Amedeo Modigliani` */
 
 function getArtistByIndex(array) {
- return array[0]
- } 
+    return artists[0];
+  } 'the artist at index 0 is Amedeo Modigliani'
+ 
+ console.log("task 3", getArtistByIndex("artists"[0])); // "the artist at index 0 is Amedeo Modigliani"
 
-console.log("task 3:", getArtistByIndex(artists[0]));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -246,16 +248,16 @@ Use listOfNames to do the following:
 */
 
 function listOfNames(array) {
-  var artists = ["Amedeo Modigliani", "Vasiliy Kandinskiy", "Diego Rivera", "Claude Monet", "Rene Magritte", "Salvador Dali", "Edouard Manet", "Andrei Rublev", "Vincent van Gogh", "Gustav Klimt", "Hieronymus Bosch", "Kazimir Malevich", "Mikhail Vrubel", "Pablo Picasso", "Peter Paul Rubens", "Pierre-Auguste Renoir", "Francisco Goya", "Frida Kahlo", "El Greco", "Albrecht Dürer"]
   
-  let i = 0
+  const artists = newArray;
 
-  while (i < array.length) {
-    console.log(artists[i]);
-    i++;
+  var newArray = ["Amedeo Modigliani", "Vasiliy Kandinskiy", "Diego Rivera", "Claude Monet", "Rene Magritte", "Salvador Dali", "Edouard Manet", "Andrei Rublev", "Vincent van Gogh", "Gustav Klimt", "Hieronymus Bosch", "Kazimir Malevich", "Mikhail Vrubel", "Pablo Picasso", "Peter Paul Rubens", "Pierre-Auguste Renoir", "Francisco Goya", "Frida Kahlo", "El Greco", "Albrecht Dürer"];
+
+  for (const artists of newArray){
+    console.log(artists);
+    }
   }
-}
-console.log("task 4:", listOfNames(artists));
+console.log("task 4:", listOfNames("artists")); // ["Amedeo Modigliani", "Vasiliy Kandinskiy", "Diego Rivera"....]
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -267,13 +269,17 @@ Use removeArtist to do the following:
 5. Return the resulting copied array
 🌟 EXAMPLE: if removeArtist is invoked with the artists array and the number 0, it will return the resulting array with Amedeo Modigliani removed from our dataset. */
 
-function removeArtist(artists) {
-  var artists = ["Amedeo Modigliani", "Vasiliy Kandinskiy", "Diego Rivera", "Claude Monet", "Rene Magritte", "Salvador Dali", "Edouard Manet", "Andrei Rublev", "Vincent van Gogh", "Gustav Klimt", "Hieronymus Bosch", "Kazimir Malevich", "Mikhail Vrubel", "Pablo Picasso", "Peter Paul Rubens", "Pierre-Auguste Renoir", "Francisco Goya", "Frida Kahlo", "El Greco", "Albrecht Dürer"];
+function removeArtist(array) {
+ const artists = ["Amedeo Modigliani", "Vasiliy Kandinskiy", "Diego Rivera", "Claude Monet", "Rene Magritte", "Salvador Dali", "Edouard Manet", "Andrei Rublev", "Vincent van Gogh", "Gustav Klimt", "Hieronymus Bosch", "Kazimir Malevich", "Mikhail Vrubel", "Pablo Picasso", "Peter Paul Rubens", "Pierre-Auguste Renoir", "Francisco Goya", "Frida Kahlo", "El Greco", "Albrecht Dürer"];
+  
+  artists.shift();
+ // "Amedeo Modigliani"
 
-  artists.pop();
-  // "Amedeo Modigliani"
+ artists;
+ // ["Vasiliy Kandinskiy", " Diego Rivera", "Claude Monet", "Rene Magritte"]
+
 }
-console.log('task 5:', removeArtist(artists));
+console.log('task 5:', removeArtist("artists"[0])); // ["Vasiliy Kandinskiy", " Diego Rivera", "Claude Monet", "Rene Magritte"]
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -292,16 +298,19 @@ Use addArtist to do the following:
 5. Add the newly created object to the copied array, then return the copied array
 🌟 EXAMPLE: Invoking addArtist(artists, 'John Doe', '1988-2022', 'Full Stack Development', 'African American', 'I have a background in customer service at Big Retail Chain. I am attending BloomTech to become a Frontend Developer.') should return the artists array with the above object added to the end of the array. */
 
-function addArtist(array, artists) {
-  var artists {
-    name: "Your Name Here", 
-    years: "Your Birth Year - current day",
-    genre: "Web Design", 
-    nationality: "Your Nationality Here",
-    bio: "Add 1-2 sentences (or use lorem ipsum)"
-  };
+function addArtist(array, name, years, genre, nationality, bio) {
+  var artists = ["Amedeo Modigliani", "Vasiliy Kandinskiy", "Diego Rivera", "Claude Monet", "Rene Magritte", "Salvador Dali",]
+  var newObject = [
+    name = "John Doe", 
+    years = "1988-2022",
+    genre = "Web Design", 
+    nationality = "African American",
+    bio = "I have a background in customer service at Big Retail Chain. I am attending BloomTech to become a Frontend Developer."
+  ];
+  artists.unshift(newObject);
+  return artists;
 }
-console.log('task 6:', array = addArtist(artists, 'John Doe', '1988-2022', 'Full Stack Development', 'African American', 'I have a background in customer service at Big Retail Chain. I am attending BloomTech to become a Frontend Developer.'));
+console.log("task 6", addArtist("artists", "John Doe", "1988-2022", "Full Stack Development", "African American", "I have a background in customer service at Big Retail Chain. I am attending BloomTech to become a Frontend Developer."));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -313,11 +322,10 @@ Use lotsOfArt to do the following:
 */
 
 function lotsOfArt(array) {
-  return artists = ["Amedeo Modigliani", "Vasiliy Kandinskiy", "Diego Rivera", "Claude Monet", "Rene Magritte", "Salvador Dali", "Edouard Manet", "Andrei Rublev", "Vincent van Gogh", "Gustav Klimt", "Hieronymus Bosch", "Kazimir Malevich", "Mikhail Vrubel", "Pablo Picasso", "Peter Paul Rubens", "Pierre-Auguste Renoir", "Francisco Goya", "Frida Kahlo", "El Greco", "Albrecht Dürer"];
+  var artists = ["Amedeo Modigliani", "Vasiliy Kandinskiy", "Diego Rivera", "Claude Monet", "Rene Magritte", "Salvador Dali",];
+  artists.length = 100;
 }
-
-console.log('task 7:', lotsOfArt(artists));
-
+console.log("task 7:", lotsOfArt(artists));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 8: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use artistInfo to do the following: 
@@ -329,11 +337,11 @@ Use artistInfo to do the following:
   "Frida Kahlo de Rivera (Spanish pronunciation: [ˈfɾiða ˈkalo]; born Magdalena Carmen Frida Kahlo y Calderón; 6 July 1907 – 13 July 1954) was a Mexican artist who painted many portraits, self-portraits and works inspired by the nature and artifacts of Mexico. Inspired by the country's popular culture, she employed a naïve folk art style to explore questions of identity, postcolonialism, gender, class and race in Mexican society. Her paintings often had strong autobiographical elements and mixed realism with fantasy. In addition to belonging to the post-revolutionary Mexicayotl movement, which sought to define a Mexican identity, Kahlo has been described as a surrealist or magical realist.Born to a German father and a mestiza mother, Kahlo spent most of her childhood and adult life at her family home in Coyoacán, La Casa Azul, now known and publicly accessible as the Frida Kahlo Museum. She was disabled by polio as a child. Until a traffic accident at age eighteen caused lifelong pain and medical problems, she had been a promising student headed for medical school. During her recovery, she returned to her childhood hobby of art with the idea of becoming an artist."
 */
 
-function artistInfo(artists){
-  return artists['Frida Kahlo']
+function artistInfo(array, name){
+  var artists = ["Frida Kahlo"];
 }
 
-console.log('task 8:', artistInfo(artists, 'Frida Kahlo'));
+console.log("task 8:", artistInfo(artists, 'Frida Kahlo'));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 9: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use artistByCountry to do the following: 
@@ -345,11 +353,12 @@ Use artistByCountry to do the following:
 🌟 EXAMPLE: Invoking artistByCountry(artists, 'Spanish') will return: [ 'Salvador Dali', 'Pablo Picasso', 'Francisco Goya']
 */
 
-function artistByCountry(array){
-  return array = artists
+function artistByCountry(array, nationality){
+  const artists = ["Amedeo Modigliani", "Vasiliy Kandinskiy", "Diego Rivera", "Claude Monet", "Rene Magritte", "Salvador Dali",]
+
 }
 
-console.log('task 9:', artistByCountry(artists, 'Spanish'));
+console.log("task 9:", artistByCountry(artists, 'Spanish'));
 
 /* ***** END OF TASKS ***** */
 
