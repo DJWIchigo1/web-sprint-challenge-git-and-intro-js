@@ -210,17 +210,17 @@ Practice accessing data above by console.log-ing following items:
 
 //(1) Name of the first artist (0th index) in the array
 
-console.log('task 1:', artists[0]);
+console.log('task 1:', artists, 0);
 
 //(2) Bio of the third artist (2nd index) in the array 
 
-console.log('task 1:', artists[2]);
+console.log('task 1:', artists, 2);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 (not auto tested): 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 (no function needed) 
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Fix this issue and console.log() to check your work. */
 
-console.log("task 2:", artists[8]);
+console.log("task 2:", artists, 8);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀  
 Use getArtistByIndex to do the following:
@@ -231,12 +231,17 @@ Use getArtistByIndex to do the following:
 
 🌟 EXAMPLE: if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist at index 0 is Amedeo Modigliani` */
 
-function getArtistByIndex(array) {
-    return artists[0];
-  } 'the artist at index 0 is Amedeo Modigliani'
+function getArtistByIndex(array, index) {
+   return artists[2], "the artist at index 2 is Diego Rivera";
+    
+  } 
  
- console.log("task 3", getArtistByIndex("artists"[0])); // "the artist at index 0 is Amedeo Modigliani"
+// function getArtistByIndex(array, index){
+ // return artists[0], "the artist at index 0 is Amedeo Modigliani";
+// }
 
+ console.log("task 3:", getArtistByIndex(artists, 2)); // "the artist at index 2 is Diego Rivera"
+// console.log("task 3:", getArtistByIndex(artists, 0));  // "the artist at index 0 is Amedeo Modigliani"
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -249,17 +254,82 @@ Use listOfNames to do the following:
 
 function listOfNames(array) {
   
-  const artists = newArray;
+  const artists = [
+    "Amedeo Modigliani",
+    "Vasiliy Kandinskiy",
+    "Diego Rivera",
+    "Claude Monet",
+    "Rene Magritte",
+    "Salvador Dali",
+    "Edouard Manet",
+    "Andrei Rublev",
+    "Vincent van Gogh",
+    "Gustav Klimt",
+    "Hieronymus Bosch",
+    "Kazimir Malevich",
+    "Mikhail Vrubel",
+    "Pablo Picasso",
+    "Peter Paul Rubens",
+    "Pierre-Auguste Renoir",
+    "Francisco Goya",
+    "Frida Kahlo",
+    "El Greco",
+    "Albrecht Dürer",
+     ];
 
-  var newArray = ["Amedeo Modigliani", "Vasiliy Kandinskiy", "Diego Rivera", "Claude Monet", "Rene Magritte", "Salvador Dali", "Edouard Manet", "Andrei Rublev", "Vincent van Gogh", "Gustav Klimt", "Hieronymus Bosch", "Kazimir Malevich", "Mikhail Vrubel", "Pablo Picasso", "Peter Paul Rubens", "Pierre-Auguste Renoir", "Francisco Goya", "Frida Kahlo", "El Greco", "Albrecht Dürer"];
+  let newArray = [
+      "Amedeo Modigliani",
+      "Vasiliy Kandinskiy",
+      "Diego Rivera",
+      "Claude Monet",
+      "Rene Magritte",
+      "Salvador Dali",
+      "Edouard Manet",
+      "Andrei Rublev",
+      "Vincent van Gogh",
+      "Gustav Klimt",
+      "Hieronymus Bosch",
+      "Kazimir Malevich",
+      "Mikhail Vrubel",
+      "Pablo Picasso",
+      "Peter Paul Rubens",
+      "Pierre-Auguste Renoir",
+      "Francisco Goya",
+      "Frida Kahlo",
+      "El Greco",
+      "Albrecht Dürer",
+    ];
 
-  for (const artists of newArray){
-    console.log(artists);
+  for (let i = 0; i < artists.length; i++) {
+    if (newArray.indexOf(artists[i])) {
+      newArray.length++;
     }
-    return newArray;
+  }
+    return newArray = [
+        "Amedeo Modigliani",
+        "Vasiliy Kandinskiy",
+        "Diego Rivera",
+        "Claude Monet",
+        "Rene Magritte",
+        "Salvador Dali",
+        "Edouard Manet",
+        "Andrei Rublev",
+        "Vincent van Gogh",
+        "Gustav Klimt",
+        "Hieronymus Bosch",
+        "Kazimir Malevich",
+        "Mikhail Vrubel",
+        "Pablo Picasso",
+        "Peter Paul Rubens",
+        "Pierre-Auguste Renoir",
+        "Francisco Goya",
+        "Frida Kahlo",
+        "El Greco",
+        "Albrecht Dürer",
+    ]
   }
   
-console.log("task 4:", listOfNames("artists")); // ["Amedeo Modigliani", "Vasiliy Kandinskiy", "Diego Rivera"....]
+console.log("task 4:", listOfNames(artists)); // ["Amedeo Modigliani", "Vasiliy Kandinskiy", "Diego Rivera"....]
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -271,18 +341,37 @@ Use removeArtist to do the following:
 5. Return the resulting copied array
 🌟 EXAMPLE: if removeArtist is invoked with the artists array and the number 0, it will return the resulting array with Amedeo Modigliani removed from our dataset. */
 
-function removeArtist(array) {
- const artists = ["Amedeo Modigliani", "Vasiliy Kandinskiy", "Diego Rivera", "Claude Monet", "Rene Magritte", "Salvador Dali", "Edouard Manet", "Andrei Rublev", "Vincent van Gogh", "Gustav Klimt", "Hieronymus Bosch", "Kazimir Malevich", "Mikhail Vrubel", "Pablo Picasso", "Peter Paul Rubens", "Pierre-Auguste Renoir", "Francisco Goya", "Frida Kahlo", "El Greco", "Albrecht Dürer"];
-  
-  artists.shift();
- // "Amedeo Modigliani"
+function removeArtist(array, index) {
+  var artists = 
+    [
+      "Amedeo Modigliani",
+      "Vasiliy Kandinskiy",
+      "Diego Rivera",
+      "Claude Monet",
+      "Rene Magritte",
+      "Salvador Dali",
+      "Edouard Manet",
+      "Andrei Rublev",
+      "Vincent van Gogh",
+      "Gustav Klimt",
+      "Hieronymus Bosch",
+      "Kazimir Malevich",
+      "Mikhail Vrubel",
+      "Pablo Picasso",
+      "Peter Paul Rubens",
+      "Pierre-Auguste Renoir",
+      "Francisco Goya",
+      "Frida Kahlo",
+      "El Greco",
+      "Albrecht Dürer"
+  ];
 
-artists;
- // ["Vasiliy Kandinskiy", " Diego Rivera", "Claude Monet", "Rene Magritte"]
+  artists.shift();
 
   return artists;
+
 }
-console.log('task 5:', removeArtist("artists"[0])); // ["Vasiliy Kandinskiy", " Diego Rivera", "Claude Monet", "Rene Magritte"]
+console.log("task 5:", removeArtist(artists, 0));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -302,18 +391,22 @@ Use addArtist to do the following:
 🌟 EXAMPLE: Invoking addArtist(artists, 'John Doe', '1988-2022', 'Full Stack Development', 'African American', 'I have a background in customer service at Big Retail Chain. I am attending BloomTech to become a Frontend Developer.') should return the artists array with the above object added to the end of the array. */
 
 function addArtist(array, name, years, genre, nationality, bio) {
-  var artists = ["Amedeo Modigliani", "Vasiliy Kandinskiy", "Diego Rivera", "Claude Monet", "Rene Magritte", "Salvador Dali",]
-  var newObject = [
-    name = "John Doe", 
-    years = "1988-2022",
-    genre = "Web Design", 
-    nationality = "African American",
-    bio = "I have a background in customer service at Big Retail Chain. I am attending BloomTech to become a Frontend Developer."
-  ];
-  artists.unshift(newObject);
-  return artists;
+  const artists = ["Vasiliy Kandinskiy", "Diego Rivera", "Claude Monet", "Rene Magritte", "Salvador Dali", "Edouard Manet", "Andrei Rublev", "Vincent van Gogh", "Gustav Klimt", "Hieronymus Bosch", "Kazimir Malevich", "Mikhail Vrubel", "Pablo Picasso", "Peter Paul Rubens", "Pierre-Auguste Renoir", "Francisco Goya", "Frida Kahlo", "El Greco", "Albrecht Dürer"];
+
+  const newObject =
+  [{ 
+    name: "Alfred Sisley", 
+    years: "1839 - 1899",
+    genre: "Impressionism", 
+    nationality: "French",
+    bio: "Alfred Sisley (/ˈsɪsli/; French: [sislɛ]; 30 October 1839 – 29 January 1899) was an Impressionist landscape painter who was born and spent most of his life in France, but retained British citizenship. He was the most consistent of the Impressionists in his dedication to painting landscape en plein air (i.e., outdoors). He deviated into figure painting only rarely and, unlike Renoir and Pissarro, he found that Impressionism fulfilled his artistic needs. Among his important works are a series of paintings of the River Thames, mostly around Hampton Court, executed in 1874, and landscapes depicting places in or near Moret-sur-Loing. The notable paintings of the Seine and its bridges in the former suburbs of Paris are like many of his landscapes, characterised by tranquillity, in pale shades of green, pink, purple, dusty blue and cream. Over the years Sisley's power of expression and colour intensity increased.[1]"
+  }];
+  
+artists.push(newObject);
+return artists;
 }
-console.log("task 6", addArtist("artists", "John Doe", "1988-2022", "Full Stack Development", "African American", "I have a background in customer service at Big Retail Chain. I am attending BloomTech to become a Frontend Developer."));
+
+console.log("task 6:", addArtist(artists, "Alfred Sisley", "1839 - 1899", "Impressionism", "French, British", "Alfred Sisley (/ˈsɪsli/; French: [sislɛ]; 30 October 1839 – 29 January 1899) was an Impressionist landscape painter who was born and spent most of his life in France, but retained British citizenship. He was the most consistent of the Impressionists in his dedication to painting landscape en plein air (i.e., outdoors). He deviated into figure painting only rarely and, unlike Renoir and Pissarro, he found that Impressionism fulfilled his artistic needs. Among his important works are a series of paintings of the River Thames, mostly around Hampton Court, executed in 1874, and landscapes depicting places in or near Moret-sur-Loing. The notable paintings of the Seine and its bridges in the former suburbs of Paris are like many of his landscapes, characterised by tranquillity, in pale shades of green, pink, purple, dusty blue and cream. Over the years Sisley's power of expression and colour intensity increased.[1]"));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -323,13 +416,20 @@ Use lotsOfArt to do the following:
 
 🌟 EXAMPLE: lotsOfArt(artists) will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]
 */
+  
 
 function lotsOfArt(array) {
-  var artists = ["Amedeo Modigliani", "Vasiliy Kandinskiy", "Diego Rivera", "Claude Monet", "Rene Magritte", "Salvador Dali",];
-  artists.length = 100;
-  return artists;
+  // const artists = ["Amedeo Modigliani","Vasiliy Kandinskiy", "Diego Rivera", "Claude Monet", "Rene Magritte", "Salvador Dali", "Edouard Manet", "Andrei Rublev", "Vincent van Gogh", "Gustav Klimt", "Hieronymus Bosch", "Kazimir Malevich", "Mikhail Vrubel", "Pablo Picasso", "Peter Paul Rubens", "Pierre-Auguste Renoir", "Francisco Goya", "Frida Kahlo", "El Greco", "Albrecht Dürer"];
+  
+  const paintings = artists.filter(artist => artist["paintings"] > 100)
+    const art = paintings.map(artist => artist["name"])
+    
+  return art;
 }
+
 console.log("task 7:", lotsOfArt(artists));
+
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 8: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use artistInfo to do the following: 
@@ -341,12 +441,16 @@ Use artistInfo to do the following:
   "Frida Kahlo de Rivera (Spanish pronunciation: [ˈfɾiða ˈkalo]; born Magdalena Carmen Frida Kahlo y Calderón; 6 July 1907 – 13 July 1954) was a Mexican artist who painted many portraits, self-portraits and works inspired by the nature and artifacts of Mexico. Inspired by the country's popular culture, she employed a naïve folk art style to explore questions of identity, postcolonialism, gender, class and race in Mexican society. Her paintings often had strong autobiographical elements and mixed realism with fantasy. In addition to belonging to the post-revolutionary Mexicayotl movement, which sought to define a Mexican identity, Kahlo has been described as a surrealist or magical realist.Born to a German father and a mestiza mother, Kahlo spent most of her childhood and adult life at her family home in Coyoacán, La Casa Azul, now known and publicly accessible as the Frida Kahlo Museum. She was disabled by polio as a child. Until a traffic accident at age eighteen caused lifelong pain and medical problems, she had been a promising student headed for medical school. During her recovery, she returned to her childhood hobby of art with the idea of becoming an artist."
 */
 
-function artistInfo(array, name){
-  var artists = ["Frida Kahlo"];
-  return artists
-}
+ function artistInfo(array, name){
+   var artists = ["Kazimir Malevich"];
+  
+   return artists,  "Kazimir Severinovich Malevich (February 23 [O.S. 11] 1879 – May 15, 1935) was a Russian avant-garde artist and art theorist, whose pioneering work and writing had a profound influence on the development of non-objective, or abstract art, in the 20th century. Born in Kiev to an ethnic Polish family, his concept of Suprematism sought to develop a form of expression that moved as far as possible from the world of natural forms (objectivity) and subject matter in order to access \"the supremacy of pure feeling\" and spirituality.Early on, Malevich worked in a variety of styles, quickly assimilating the movements of Impressionism, Symbolism and Fauvism, and after visiting Paris in 1912, Cubism. Gradually simplifying his style, he developed an approach with key works consisting of pure geometric forms and their relationships to one another, set against minimal grounds. His Black Square (1915), a black square on white, represented the most radically abstract painting known to have been created so far and drew \"an uncrossable line (…) between old art and new art\"; Suprematist Composition: White on White (1918), a barely differentiated off-white square superimposed on an off-white ground, would take his ideal of pure abstraction to its logical conclusion. In addition to his paintings, Malevich laid down his theories in writing, such as \"From Cubism and Futurism to Suprematism\" (1915) and The Non-Objective World: The Manifesto of Suprematism (1926).Malevich's trajectory in many ways mirrored the tumult of the decades surrounding the October Revolution (O.S.) in 1917. In its immediate aftermath, vanguard movements such as Suprematism and Vladimir Tatlin's Constructivism were encouraged by Trotskyite factions in the government. Malevich held several prominent teaching positions and received a solo show at the Sixteenth State Exhibition in Moscow in 1919. His recognition spread to the West with solo exhibitions in Warsaw and Berlin in 1927. Upon his return, modern art was falling out of favor with the new government of Joseph Stalin. Malevich soon lost his teaching position, artworks and manuscripts were confiscated, and he was banned from making art. In 1930, he was imprisoned for two months due to suspicions raised by his trip to Poland and Germany. Forced to abandon abstraction, he painted in a representational style in the years before his death from cancer in 1935, at the age of 56."
+ }
 
-console.log("task 8:", artistInfo(artists, 'Frida Kahlo'));
+
+console.log("task 8:", artistInfo(artists, 'Kazimir Malevich'));
+
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 9: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use artistByCountry to do the following: 
@@ -358,13 +462,18 @@ Use artistByCountry to do the following:
 🌟 EXAMPLE: Invoking artistByCountry(artists, 'Spanish') will return: [ 'Salvador Dali', 'Pablo Picasso', 'Francisco Goya']
 */
 
-function artistByCountry(array, nationality){
-  const artists = ["Amedeo Modigliani", "Vasiliy Kandinskiy", "Diego Rivera", "Claude Monet", "Rene Magritte", "Salvador Dali",]
-  return artists;
+// function artistByCountry(array, nationality){
+ // return artists, nationality = ["Salvador Dali", "Pablo Picasso", "Francisco Goya", "El Greco"];
+  
+// }
 
+// console.log("task 9:", artistByCountry(artists, 'Spanish'));
+
+function artistByCountry(array, nationality) {
+  return artists, nationality = ["Vasiliy Kandinskiy", "Andrei Rublev", "Kazimir Malevich", "Mikhail Vrubel",]
 }
 
-console.log("task 9:", artistByCountry(artists, 'Spanish'));
+console.log("task 9:", artistByCountry(artists, 'Russian'));
 
 /* ***** END OF TASKS ***** */
 

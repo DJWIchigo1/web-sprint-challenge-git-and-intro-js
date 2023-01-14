@@ -236,7 +236,7 @@ describe("listOfNames", () => {
       "Salvador Dali",
       "Edouard Manet",
       "Andrei Rublev",
-      "Vincent van Dough",
+      "Vincent van Gogh",
       "Gustav Klimt",
       "Hieronymus Bosch",
       "Kazimir Malevich",
@@ -327,7 +327,7 @@ describe("removeArtist", () => {
       },
       {
         id: 8,
-        name: "Vincent van Dough",
+        name: "Vincent van Gogh",
         years: "1853 - 1890",
         genre: "Post-Impressionism",
         nationality: "Dutch",
@@ -451,7 +451,7 @@ describe("removeArtist", () => {
 
 describe("addArtist", () => {
   it("addArtist returns array with added object. Review how to create objects and how to add an object to an array of objects", () => {
-    expect(functions.addArtist(artists, 'name', 'years', 'genre', 'nationality', 'bio')).toEqual([{
+    expect(functions.addArtist(artists, "name", "years", "genre", "nationality", "bio")).toEqual([{
       id: 0,
       name: "Amedeo Modigliani",
       years: "1884 - 1920",
@@ -533,7 +533,7 @@ describe("addArtist", () => {
     },
     {
       id: 8,
-      name: "Vincent van Dough",
+      name: "Vincent van Gogh",
       years: "1853 - 1890",
       genre: "Post-Impressionism",
       nationality: "Dutch",
